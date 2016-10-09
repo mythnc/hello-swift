@@ -9,15 +9,15 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var textField: UITextField!
-    
-    @IBOutlet weak var label: UILabel!
-    
-    @IBAction func displayName(_ sender: AnyObject) {
-        label.text = textField.text
-    }
 
+    @IBOutlet weak var ageField: UITextField!
+    @IBOutlet weak var catYear: UILabel!
+    
+    @IBAction func multipleButton(_ sender: AnyObject) {
+        let catAge = Int(ageField.text!)! * 7
+        catYear.text = String(catAge)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
