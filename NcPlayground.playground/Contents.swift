@@ -2,33 +2,36 @@
 
 import UIKit
 
-var str = "Hello, playground"
+// Array
+var array = [35, 36, 1, 0]
+print(array[0])
+print(array.count)
+array.append(3)
+array.sort()
 
-let name = "nc wu"
+var ar = [3.87, 7.1, 8.9]
+ar.remove(at: 1)
+ar.append(ar[0] * ar[1])
 
-print(name)
+let mixAr = [3.5, 3, "hello", false] as [Any]
+var strAr = [String]()
+strAr.append("3")
 
-var myInt = 42
+// Dictionary
+var dict = ["computer": "intel",
+"coffee": "energy"]
+print(dict["computer"]) // Optional("intel")
+print(dict["computer"]!) // intel
+// print(dict["error"]!) error
 
-print(myInt + 8)
+print(dict.count)
+dict["phone"] = "samsung"
+dict.removeValue(forKey: "coffee")
+print(dict)
 
-myInt += 1
+var charDict = [String: Double]()
+charDict["123"] = 12.3
 
-myInt / 5
-myInt % 5
-
-
-print("myInt: \(myInt)")
-
-let age = 1
-print("my name is \(name) and I am \(age) years old")
-
-var a: Double = 8.73
-var b: Float = 8.73
-var c = 3.2
-print(a / c)
-print(Int(a))
-
-let d = 5.76
-let i = 8
-print(d * Double(i))
+var menuDict = [String: Double]()
+menuDict = ["pizza": 10.99, "ice cream": 4.99, "salad": 7.99]
+print("The total cost of my meal is \(menuDict["pizza"]! + menuDict["salad"]!)")
