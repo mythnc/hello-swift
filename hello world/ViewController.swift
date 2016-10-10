@@ -9,20 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    @IBOutlet weak var ageField: UITextField!
-    @IBOutlet weak var catYear: UILabel!
+    @IBOutlet weak var guessN: UITextField!
     
-    @IBAction func multipleButton(_ sender: AnyObject) {
-        let catAge = Int(ageField.text!)! * 7
-        catYear.text = String(catAge)
+    @IBOutlet weak var answerDisplay: UILabel!
+    
+    @IBAction func guessButton(_ sender: AnyObject) {
+        let n = arc4random_uniform(6)
+        
+        if guessN.text == String(n) {
+            answerDisplay.text = "You're right!"
+        } else {
+            answerDisplay.text = "Wrong! It was a \(n)."
+        }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
     }
 
     override func didReceiveMemoryWarning() {

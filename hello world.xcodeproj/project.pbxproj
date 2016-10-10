@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		144F62E31DAA326600DB4620 /* quote.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 144F62E21DAA326600DB4620 /* quote.jpg */; };
-		144F62E51DAA5A2100DB4620 /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 144F62E41DAA5A2100DB4620 /* cat.jpg */; };
 		14DDA7941DA910FB000F8A19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDA7931DA910FB000F8A19 /* AppDelegate.swift */; };
 		14DDA7961DA910FB000F8A19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14DDA7951DA910FB000F8A19 /* ViewController.swift */; };
 		14DDA7991DA910FB000F8A19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14DDA7971DA910FB000F8A19 /* Main.storyboard */; };
@@ -17,8 +15,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		144F62E21DAA326600DB4620 /* quote.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = quote.jpg; path = ../../../Downloads/quote.jpg; sourceTree = "<group>"; };
-		144F62E41DAA5A2100DB4620 /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cat.jpg; path = ../../../Downloads/cat.jpg; sourceTree = "<group>"; };
 		14DDA7901DA910FB000F8A19 /* hello world.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "hello world.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DDA7931DA910FB000F8A19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		14DDA7951DA910FB000F8A19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +57,6 @@
 				14DDA7931DA910FB000F8A19 /* AppDelegate.swift */,
 				14DDA7951DA910FB000F8A19 /* ViewController.swift */,
 				14DDA7971DA910FB000F8A19 /* Main.storyboard */,
-				144F62E21DAA326600DB4620 /* quote.jpg */,
-				144F62E41DAA5A2100DB4620 /* cat.jpg */,
 				14DDA79A1DA910FB000F8A19 /* Assets.xcassets */,
 				14DDA79C1DA910FB000F8A19 /* LaunchScreen.storyboard */,
 				14DDA79F1DA910FB000F8A19 /* Info.plist */,
@@ -132,8 +126,6 @@
 				14DDA79E1DA910FB000F8A19 /* LaunchScreen.storyboard in Resources */,
 				14DDA79B1DA910FB000F8A19 /* Assets.xcassets in Resources */,
 				14DDA7991DA910FB000F8A19 /* Main.storyboard in Resources */,
-				144F62E51DAA5A2100DB4620 /* cat.jpg in Resources */,
-				144F62E31DAA326600DB4620 /* quote.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
