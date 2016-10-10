@@ -2,23 +2,24 @@
 
 import UIKit
 
-var i = 1
-
-while i < 10 {
-    print(i)
-    i += 1
+var array = [8, 4, 8, 1]
+for n in array {
+    print(n)
 }
 
-i = 1
-while i <= 20 {
-    print(i * 7)
-    i += 1
+let names = ["rob", "nc", "eric", "john"]
+for name in names {
+    print("Hi there \(name)!")
 }
 
-var array = [7, 23, 98, 1, 0, 763]
-i = 0
-while i < array.count{
-    array[i] += 1
-    i += 1
+for (index, value) in array.enumerated() {
+    array[index] += 1
 }
 print(array)
+
+var seq = [Double]()
+seq = [8, 7, 19, 28]
+for (i, v) in seq.enumerated() {
+    seq[i] /= 2
+}
+print(seq)
