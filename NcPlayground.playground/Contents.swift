@@ -2,24 +2,26 @@
 
 import UIKit
 
-var array = [8, 4, 8, 1]
-for n in array {
-    print(n)
+class Ghost {
+    var isAlive = true
+    var strength = 9
+    
+    func kill() {
+        isAlive = false
+    }
+    
+    func isStrong() -> Bool {
+        if strength > 10 {
+            return true
+        }
+        return false
+    }
 }
 
-let names = ["rob", "nc", "eric", "john"]
-for name in names {
-    print("Hi there \(name)!")
-}
-
-for (index, value) in array.enumerated() {
-    array[index] += 1
-}
-print(array)
-
-var seq = [Double]()
-seq = [8, 7, 19, 28]
-for (i, v) in seq.enumerated() {
-    seq[i] /= 2
-}
-print(seq)
+var ghost = Ghost()
+print(ghost.isAlive)
+ghost.strength = 20
+print(ghost.strength)
+ghost.kill()
+print(ghost.isAlive)
+print(ghost.isStrong())
