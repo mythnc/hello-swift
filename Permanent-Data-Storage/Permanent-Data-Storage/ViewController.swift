@@ -10,26 +10,23 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var displayNumber: UILabel!
+    
+    @IBAction func saveButton(_ sender: AnyObject) {
+        if let phoneString = phoneNumber.text {
+            UserDefaults.standard.set(phoneString, forKey: "phoneNumber")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        // save string
-        UserDefaults.standard.set("nc", forKey: "name")
-        let nameObject = UserDefaults.standard.object(forKey: "name")
-        if let name = nameObject as? String {
-            print(name)
+        let phoneObject = UserDefaults.standard.object(forKey: "phoneNumber")
+        if let phoneN = phoneObject as? String {
+            displayNumber.text = phoneN
         }
-        
-        // save array
-        let arr = [1, 2, 3, 4]
-        UserDefaults.standard.set(arr, forKey: "array")
-        
-        let arrayObj = UserDefaults.standard.object(forKey: "array")
-        if let array = arrayObj as? NSArray {
-            print(array)
-        }
-        
     }
 
     override func didReceiveMemoryWarning() {
