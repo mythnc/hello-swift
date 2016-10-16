@@ -2,20 +2,33 @@
 
 import UIKit
 
-var number: Int
-// print(number) error
 
-var number2: Int?
-// nil
-print(number2)
 
-let userEnteredText = "three"
-// nil
-let userEnteredInt = Int(userEnteredText)
+func isPrime(n: Int) -> Bool {
+    if n == 2 {
+        return true
+    }
+    if n % 2 == 0 {
+        return false
+    }
+    
+    var i = 3
+    let sqrt_n = Int(floor(sqrt(Double(n))))
+    while (i <= sqrt_n) {
+        if (n % i == 0) {
+            return false
+        }
+        i += 2
+    }
+    return true
+}
 
-if let catAge = userEnteredInt {
-    print(catAge * 7)
-} else {
-    // show error msg to user
-    print("gg")
+var i = 2
+var counter = 0
+while (i <= 100) {
+    if isPrime(n: i) {
+        counter += 1
+        print("\(counter): \(i)")
+    }
+    i += 1
 }
