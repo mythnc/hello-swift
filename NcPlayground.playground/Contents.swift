@@ -2,26 +2,20 @@
 
 import UIKit
 
-class Ghost {
-    var isAlive = true
-    var strength = 9
-    
-    func kill() {
-        isAlive = false
-    }
-    
-    func isStrong() -> Bool {
-        if strength > 10 {
-            return true
-        }
-        return false
-    }
-}
+var number: Int
+// print(number) error
 
-var ghost = Ghost()
-print(ghost.isAlive)
-ghost.strength = 20
-print(ghost.strength)
-ghost.kill()
-print(ghost.isAlive)
-print(ghost.isStrong())
+var number2: Int?
+// nil
+print(number2)
+
+let userEnteredText = "three"
+// nil
+let userEnteredInt = Int(userEnteredText)
+
+if let catAge = userEnteredInt {
+    print(catAge * 7)
+} else {
+    // show error msg to user
+    print("gg")
+}
