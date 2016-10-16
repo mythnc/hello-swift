@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,18 +19,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="D13-99-cF3">
-                                <frame key="frameInset" minX="14" minY="28" width="347" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="20" translatesAutoresizingMaskIntoConstraints="NO" id="D13-99-cF3">
                                 <connections>
                                     <action selector="sliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="MjO-7k-UQr"/>
                                 </connections>
                             </slider>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DPj-xS-2FU">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="XwB-3q-Xkh">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XwB-3q-Xkh" id="QRx-fN-eJn">
+                                            <frame key="frameInset" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="16y-cF-whb"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Cw2-5R-7jO"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="DPj-xS-2FU" firstAttribute="top" secondItem="D13-99-cF3" secondAttribute="bottom" constant="8" id="6Ne-A2-61M"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="DPj-xS-2FU" secondAttribute="bottom" id="JRv-8s-Ahy"/>
+                            <constraint firstItem="DPj-xS-2FU" firstAttribute="top" secondItem="D13-99-cF3" secondAttribute="bottom" constant="8" id="Zha-oZ-oB7"/>
+                            <constraint firstItem="DPj-xS-2FU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZzN-YA-vyY"/>
+                            <constraint firstItem="D13-99-cF3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="h68-El-VkQ"/>
+                            <constraint firstItem="D13-99-cF3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="mYD-UM-Cdb"/>
+                            <constraint firstAttribute="trailing" secondItem="DPj-xS-2FU" secondAttribute="trailing" id="pyb-zS-4YH"/>
+                            <constraint firstItem="D13-99-cF3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="t8G-dW-Zgu"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="slider" destination="D13-99-cF3" id="w2X-kT-7Ot"/>
+                        <outlet property="table" destination="DPj-xS-2FU" id="qZs-rP-aPK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
