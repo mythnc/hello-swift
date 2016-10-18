@@ -9,21 +9,29 @@
 import UIKit
 
 class SecondViewController: UIViewController, UITextFieldDelegate {
-    
     @IBOutlet weak var todoTextField: UITextField!
 
     @IBAction func addTodoButton(_ sender: AnyObject) {
-        self.view.endEditing(true)
-        addTodo()
+        if let item = todoTextField.text {
+            if item == "" {
+                return
+            }
+            
+            self.view.endEditing(true)
+            addTodo(item: item)
+        }
     }
     
-    func addTodo() {
-        if let todoString = todoTextField.text {
-            if todoString != "" {
-                print("todo: \(todoString)")
-                todoTextField.text = ""
-            }
+    func addTodo(item: String) {
+        let itemsObject = UserDefaults.standard.object(forKey: "items")
+        if var items = itemsObject as? [String] {
+            items.append(item)
+            UserDefaults.standard.set(items, forKey: "items")
+        } else {
+            let items = [item]
+            UserDefaults.standard.set(items, forKey: "items")
         }
+        todoTextField.text = ""
     }
     
     override func viewDidLoad() {
@@ -43,7 +51,13 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         // turn off the keyboard
         textField.resignFirstResponder()
-        addTodo()
+        if let item = todoTextField.text {
+            if item == "" {
+                return true
+            }
+
+            addTodo(item: item)
+        }
         return true
     }
 }
