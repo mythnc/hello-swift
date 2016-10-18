@@ -22,6 +22,20 @@ class FirstViewController: UIViewController, UITableViewDataSource, UITableViewD
         return cell
     }
     
+    // After a row has the minus or plus button invoked (based on the UITableViewCellEditingStyle for the cell), the dataSource must commit the change
+    // Not called for edit actions using UITableViewRowAction - the action's handler will be invoked instead
+    public func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath){
+        // 1. check the operation
+        if editingStyle == .delete {
+            // 2. delete item from data source
+            todoList.remove(at: indexPath.row)
+            UserDefaults.standard.set(todoList, forKey: "todoList")
+            // 3. display delete animation in tableView
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
