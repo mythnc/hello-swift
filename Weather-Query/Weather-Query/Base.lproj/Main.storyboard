@@ -44,23 +44,44 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Lpk-Iq-kNr"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tx-Hk-AxS">
                                 <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="query:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYi-fN-7D1"/>
+                                </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ADs-sD-bhK">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Ksw-BM-Cj1"/>
+                                    <constraint firstAttribute="height" constant="115" id="iH7-Cx-YKg"/>
+                                </constraints>
+                                <string key="text">Light rain (total 5mm), mostly falling on Fri night. Warm (max 34°C on Thu afternoon, min 26°C on Wed night). Winds decreasing (strong winds from the ESE on Thu morning, calm by Fri night).</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8ny-Zg-ctS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6MN-I9-ijo"/>
                             <constraint firstItem="uBV-qv-mmY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DyT-TC-fDj"/>
                             <constraint firstItem="0tx-Hk-AxS" firstAttribute="top" secondItem="8L8-qK-sxv" secondAttribute="bottom" constant="16" id="LHj-Ka-YJ0"/>
+                            <constraint firstItem="ADs-sD-bhK" firstAttribute="top" secondItem="0tx-Hk-AxS" secondAttribute="bottom" constant="8" id="bmo-DY-QkZ"/>
                             <constraint firstItem="uBV-qv-mmY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bpk-66-FBy"/>
                             <constraint firstItem="8L8-qK-sxv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heV-8e-ZL0"/>
                             <constraint firstItem="8L8-qK-sxv" firstAttribute="top" secondItem="8ny-Zg-ctS" secondAttribute="bottom" constant="16" id="k4j-fw-pgH"/>
                             <constraint firstItem="0tx-Hk-AxS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCn-fO-JXZ"/>
                             <constraint firstItem="8ny-Zg-ctS" firstAttribute="top" secondItem="uBV-qv-mmY" secondAttribute="bottom" constant="8" id="wdt-tY-5nd"/>
+                            <constraint firstItem="ADs-sD-bhK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zKV-AD-Zo2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="queryText" destination="8L8-qK-sxv" id="vYp-Cq-GSh"/>
+                        <outlet property="weatherSummary" destination="ADs-sD-bhK" id="qSo-7h-S6y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
