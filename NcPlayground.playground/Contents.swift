@@ -2,33 +2,28 @@
 
 import UIKit
 
+var str = "Hello"
+var newStr = str + " nc!"
 
-
-func isPrime(n: Int) -> Bool {
-    if n == 2 {
-        return true
-    }
-    if n % 2 == 0 {
-        return false
-    }
-    
-    var i = 3
-    let sqrt_n = Int(floor(sqrt(Double(n))))
-    while (i <= sqrt_n) {
-        if (n % i == 0) {
-            return false
-        }
-        i += 2
-    }
-    return true
+for ch in newStr.characters {
+    print(ch)
 }
 
-var i = 2
-var counter = 0
-while (i <= 100) {
-    if isPrime(n: i) {
-        counter += 1
-        print("\(counter): \(i)")
-    }
-    i += 1
+// NSString type is powerful than String type
+let newTypeStr = NSString(string: newStr)
+newTypeStr.substring(to: 5)
+newTypeStr.substring(from: 5)
+
+let name = NSString(string: newTypeStr.substring(from: 6)).substring(to: 2)
+newTypeStr.substring(with: NSRange(location: 6, length: 2))
+
+if newTypeStr.contains("nc") {
+    print("contain my name")
 }
+
+// split string
+newTypeStr.components(separatedBy: " ")
+
+newTypeStr.uppercased
+
+newTypeStr.lowercased
