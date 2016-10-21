@@ -54,12 +54,11 @@
                                     <action selector="query:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oYi-fN-7D1"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ADs-sD-bhK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="ADs-sD-bhK">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="Ksw-BM-Cj1"/>
                                     <constraint firstAttribute="height" constant="115" id="iH7-Cx-YKg"/>
                                 </constraints>
-                                <string key="text">Light rain (total 5mm), mostly falling on Fri night. Warm (max 34°C on Thu afternoon, min 26°C on Wed night). Winds decreasing (strong winds from the ESE on Thu morning, calm by Fri night).</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
