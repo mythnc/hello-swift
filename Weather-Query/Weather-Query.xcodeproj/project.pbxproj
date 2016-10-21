@@ -12,7 +12,7 @@
 		147E80941DB7AFFA008F46BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E80921DB7AFFA008F46BF /* Main.storyboard */; };
 		147E80961DB7AFFA008F46BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147E80951DB7AFFA008F46BF /* Assets.xcassets */; };
 		147E80991DB7AFFA008F46BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147E80971DB7AFFA008F46BF /* LaunchScreen.storyboard */; };
-		147E80A71DB7B48B008F46BF /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 147E80A61DB7B48B008F46BF /* bg.png */; };
+		147E80A91DBA79C5008F46BF /* bg.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 147E80A81DBA79C5008F46BF /* bg.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		147E80951DB7AFFA008F46BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		147E80981DB7AFFA008F46BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		147E809A1DB7AFFA008F46BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		147E80A61DB7B48B008F46BF /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		147E80A81DBA79C5008F46BF /* bg.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				147E80951DB7AFFA008F46BF /* Assets.xcassets */,
 				147E80971DB7AFFA008F46BF /* LaunchScreen.storyboard */,
 				147E809A1DB7AFFA008F46BF /* Info.plist */,
-				147E80A61DB7B48B008F46BF /* bg.png */,
+				147E80A81DBA79C5008F46BF /* bg.jpeg */,
 			);
 			path = "Weather-Query";
 			sourceTree = "<group>";
@@ -126,9 +126,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				147E80A91DBA79C5008F46BF /* bg.jpeg in Resources */,
 				147E80991DB7AFFA008F46BF /* LaunchScreen.storyboard in Resources */,
 				147E80961DB7AFFA008F46BF /* Assets.xcassets in Resources */,
-				147E80A71DB7B48B008F46BF /* bg.png in Resources */,
 				147E80941DB7AFFA008F46BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

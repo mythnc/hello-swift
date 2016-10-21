@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="36H-xO-x4H"/>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's The Weather?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBV-qv-mmY">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="295" id="4FC-Rn-HX7"/>
@@ -66,13 +67,17 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="8ny-Zg-ctS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6MN-I9-ijo"/>
+                            <constraint firstItem="36H-xO-x4H" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8jA-4q-j7R"/>
+                            <constraint firstItem="36H-xO-x4H" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DsO-Ba-kBK"/>
                             <constraint firstItem="uBV-qv-mmY" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="DyT-TC-fDj"/>
+                            <constraint firstAttribute="trailing" secondItem="36H-xO-x4H" secondAttribute="trailing" id="GZa-Tm-yOy"/>
                             <constraint firstItem="0tx-Hk-AxS" firstAttribute="top" secondItem="8L8-qK-sxv" secondAttribute="bottom" constant="16" id="LHj-Ka-YJ0"/>
                             <constraint firstItem="ADs-sD-bhK" firstAttribute="top" secondItem="0tx-Hk-AxS" secondAttribute="bottom" constant="8" id="bmo-DY-QkZ"/>
                             <constraint firstItem="uBV-qv-mmY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bpk-66-FBy"/>
                             <constraint firstItem="8L8-qK-sxv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="heV-8e-ZL0"/>
                             <constraint firstItem="8L8-qK-sxv" firstAttribute="top" secondItem="8ny-Zg-ctS" secondAttribute="bottom" constant="16" id="k4j-fw-pgH"/>
                             <constraint firstItem="0tx-Hk-AxS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oCn-fO-JXZ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="36H-xO-x4H" secondAttribute="bottom" id="qN4-YH-GaN"/>
                             <constraint firstItem="8ny-Zg-ctS" firstAttribute="top" secondItem="uBV-qv-mmY" secondAttribute="bottom" constant="8" id="wdt-tY-5nd"/>
                             <constraint firstItem="ADs-sD-bhK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zKV-AD-Zo2"/>
                         </constraints>
@@ -87,4 +92,7 @@
             <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg.jpeg" width="1000" height="667"/>
+    </resources>
 </document>

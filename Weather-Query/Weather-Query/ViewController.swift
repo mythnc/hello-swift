@@ -71,8 +71,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg.png")!)
     }
 
     override func didReceiveMemoryWarning() {
