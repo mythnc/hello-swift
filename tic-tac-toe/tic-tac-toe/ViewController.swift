@@ -23,17 +23,16 @@ class ViewController: UIViewController {
     let crossImg = UIImage(named: "cross.png")
     let noughtImg = UIImage(named: "nought.png")
     var isNought = false
-    var isPressed = Array(repeating: false, count: 9)
     var record = Array(repeating: "", count: 9)
     var isFinished = false
+    var isDisplayed = false
     var buttons: [UIButton] = [UIButton]()
     
     func setButtonImage(i: Int) {
-        if isPressed[i] || isFinished {
+        if record[i] != "" || isFinished {
             return
         }
-        
-        isPressed[i] = true
+
         if !isNought {
             buttons[i].setBackgroundImage(noughtImg, for: .normal)
             record[i] = "O"
@@ -62,15 +61,27 @@ class ViewController: UIViewController {
     }
     
     @IBAction func reset(_ sender: AnyObject) {
+        isNought = false
+        isFinished = false
+        isDisplayed = false
+        winMsg.text = ""
+        for i in 0...8 {
+            buttons[i].setBackgroundImage(nil, for: .normal)
+            record[i] = ""
+        }
     }
     
     func displayWinMsg(i: Int) {
+        if isDisplayed {
+            return
+        }
         winMsg.center = CGPoint(x: winMsg.center.x - 500, y: winMsg.center.y)
         
         UIView.animate(withDuration: 1) {
             self.winMsg.center = CGPoint(x: self.winMsg.center.x + 500, y: self.winMsg.center.y)
         }
         
+        isDisplayed = true
         if record[i] == "O" {
             winMsg.text = "Nought has won!"
             return
